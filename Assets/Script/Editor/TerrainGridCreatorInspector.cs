@@ -14,6 +14,10 @@ public class TerrainGridCreatorInspector : Editor {
             ClearGrid();
             CreateGrid();
         }
+
+        if (GUILayout.Button("Update Tile")) {
+            UpdateTileInfo();
+        }
     }
 
     private void ClearGrid(){
@@ -70,5 +74,11 @@ public class TerrainGridCreatorInspector : Editor {
         tempTile.transform.localScale *= terrainGridCreator.tileDistance;
         tempTile.transform.localPosition = new Vector3(x, 0, z);
         tempTile.name = "Tile:" + i + ":" + j;
+    }
+
+    private void UpdateTileInfo() {
+        foreach (TerrainTile tile in terrainGridCreator.GetComponentsInChildren<TerrainTile>()) {
+            tile.materialList = terrainGridCreator.terrainTile.materialList;
+        }
     }
 }
