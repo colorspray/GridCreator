@@ -12,6 +12,8 @@ public class TerrainTile : MonoBehaviour {
     }
     public Material[] materialList;
 
+    [SerializeField]
+    [HideInInspector]
     private eTerrainType tileTerrainType = eTerrainType.GRASS;
 
     public eTerrainType TileTerrainType {
