@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-[ExecuteInEditMode]
+[ExecuteInEditMode]  
 public class TerrainTile : MonoBehaviour {
     public enum eTerrainType {
         GRASS = 0,
