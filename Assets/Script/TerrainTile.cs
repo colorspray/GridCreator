@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 
 [ExecuteInEditMode]  
@@ -10,7 +11,9 @@ public class TerrainTile : MonoBehaviour {
         DESERT,
         ROCK
     }
-    public Material[] materialList;
+
+    [HideInInspector]
+    public List<Material> materialList = new List<Material>();
 
     [SerializeField]
     [HideInInspector]
@@ -31,6 +34,7 @@ public class TerrainTile : MonoBehaviour {
             return tileTerrainType;
         }
     }
+
 
 	// Use this for initialization
 	void Start () {
