@@ -35,7 +35,6 @@ public class TerrainTile : MonoBehaviour {
         }
     }
 
-
 	// Use this for initialization
 	void Start () {
 	
